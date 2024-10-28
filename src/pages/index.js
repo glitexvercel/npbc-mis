@@ -1,30 +1,17 @@
-import { AboutUs, Admission, Carousel, Courses } from "@/components";
+import React from "react";
 import Layout from "@/layout";
+import { Hero, Portals } from "@/components";
 
-export default function Home() {
+const Index = () => {
   return (
-    <>
-      <Layout>
-        {/* Carousel */}
-        <Carousel
-          title={"Our Philosophy"}
-          subTitle={"Nurturing Potential Building Character"}
-        >
-          <Courses />
-        </Carousel>
+    <Layout hideApplication={true}>
+      {/*  Hero section*/}
+      <Hero />
 
-        {/* About us */}
-        <AboutUs />
-
-        {/* Admission */}
-        <Admission />
-
-        {/* News and updates */}
-        {/* <News/> */}
-
-        {/* Questions */}
-        {/* <Questions/> */}
-      </Layout>
-    </>
+      {/*    Portals section   */}
+      <Portals />
+    </Layout>
   );
-}
+};
+
+export default Index;
