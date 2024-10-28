@@ -86,6 +86,7 @@ const portals = [
     desc: "Learn about admission requirements, how to apply, and the next steps once you’ve applied to the NPBC.",
     type: "administrator",
     image: "/images/e-learning/admins.jpeg",
+    route: "https://npbc-admin.npbc.co.ke/login",
   },
 ];
 
