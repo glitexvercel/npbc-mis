@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <div className={"relative h-[35vh]"}>
       <Image
-        src={"/images/e-learning/hero.jpeg"}
+        src={"/images/home/carousel-1.webp"}
         alt={"hero"}
-        className={"h-full w-full object-cover object-bottom"}
+        className={"h-full w-full object-cover object-center"}
         width={1700}
         height={950}
       />
