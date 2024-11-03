@@ -5,6 +5,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Button } from "@/components/ui/button";
 import useFees from "@/hooks/useFees";
 import { formatCurrency } from "@/lib/utils";
+import PayFeeDialogue from "@/components/e-learning/finances/PayFeeDialogue";
 
 const FeeBalanceCard = () => {
   const { data } = useFees();
@@ -24,13 +25,15 @@ const FeeBalanceCard = () => {
           <h6 className={"text-sm"}>Semester Fees</h6>
         </div>
 
-        <Button
-          className={"text-sm text-c-blue border border-c-blue font-light"}
-          variant={"outline"}
-        >
-          Pay Fees
-          <HiArrowUpRight className={"ml-2"} />
-        </Button>
+        <PayFeeDialogue>
+          <Button
+            className={"text-sm text-c-blue border border-c-blue font-light"}
+            variant={"outline"}
+          >
+            Pay Fees
+            <HiArrowUpRight className={"ml-2"} />
+          </Button>
+        </PayFeeDialogue>
       </div>
 
       <div className={"rounded-xl flex_row overflow-hidden"}>

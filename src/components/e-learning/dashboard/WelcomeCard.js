@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { useSession } from "next-auth/react";
+import PayFeeDialogue from "@/components/e-learning/finances/PayFeeDialogue";
 
 const WelcomeCard = () => {
   const session = useSession();
@@ -31,13 +32,15 @@ const WelcomeCard = () => {
           <HiArrowUpRight className={"ml-2"} />
         </Button>
 
-        <Button
-          className={"text-sm text-c-blue border border-c-blue font-light"}
-          variant={"outline"}
-        >
-          Pay Fees
-          <HiArrowUpRight className={"ml-2"} />
-        </Button>
+        <PayFeeDialogue>
+          <Button
+            className={"text-sm text-c-blue border border-c-blue font-light"}
+            variant={"outline"}
+          >
+            Pay Fees
+            <HiArrowUpRight className={"ml-2"} />
+          </Button>
+        </PayFeeDialogue>
       </div>
     </div>
   );

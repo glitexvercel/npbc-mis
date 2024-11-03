@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components";
 import { HiArrowUpRight } from "react-icons/hi2";
+import PayFeeDialogue from "@/components/e-learning/finances/PayFeeDialogue";
 
 const Banner = () => {
   return (
@@ -18,12 +19,16 @@ const Banner = () => {
           document below.
         </p>
 
-        <Button
-          className={"bg-c-blue text-white flex_row text-sm px-5 items-center"}
-        >
-          Pay your Fees
-          <HiArrowUpRight className={"ml-2 text-white"} />
-        </Button>
+        <PayFeeDialogue>
+          <Button
+            className={
+              "bg-c-blue text-white flex_row text-sm px-5 items-center"
+            }
+          >
+            Pay your Fees
+            <HiArrowUpRight className={"ml-2 text-white"} />
+          </Button>
+        </PayFeeDialogue>
       </div>
     </div>
   );

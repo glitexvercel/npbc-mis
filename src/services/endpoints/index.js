@@ -19,6 +19,7 @@ const endpoints = {
   fee_mpesa: "fee-mpesa",
   validate_mpesa: "mpesa/stk-push/validate/",
   attendance_stats: "attendance-stats/",
+  pay_via_mpesa: "mpesa/stk-push'",
 };
 
 export default endpoints;

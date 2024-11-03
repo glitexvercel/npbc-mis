@@ -87,7 +87,7 @@ const UploadResultsDialogue = ({ children }) => {
 
 export default UploadResultsDialogue;
 
-const ResultInput = ({ id = "input", label, ...rest }) => {
+export const ResultInput = ({ id = "input", label, ...rest }) => {
   return (
     <div className={"flex flex-col gap-2 flex-1"}>
       <label htmlFor={id} className={"text-gray-700 text-sm font-semibold"}>
@@ -102,7 +102,7 @@ const ResultInput = ({ id = "input", label, ...rest }) => {
   );
 };
 
-const ResultSelector = ({
+export const ResultSelector = ({
   id = "input",
   label,
   placeholder,
