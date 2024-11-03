@@ -76,7 +76,7 @@ export const renderCell = (props) => {
   );
 };
 
-const timeTableColumns = [
+export const timeTableColumns = [
   {
     accessorKey: "Monday",
     header: "Monday",
@@ -100,6 +100,11 @@ const timeTableColumns = [
   {
     accessorKey: "Friday",
     header: "Friday",
+    cell: renderCell,
+  },
+  {
+    accessorKey: "Saturday",
+    header: "Saturday",
     cell: renderCell,
   },
 ];
