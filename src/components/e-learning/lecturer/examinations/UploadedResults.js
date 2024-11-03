@@ -4,6 +4,7 @@ import { ReceiptSvg, UploadSvg } from "@/assets/icons";
 import { Table, TableBody, TableRow } from "@/components/ui/table";
 import ResourceCard from "@/components/e-learning/ResourceCard";
 import Theme from "@/constants/Theme";
+import { LecturerUploadResultsDialogue } from "@/components";
 
 const UploadedResults = ({ hideUpload = false }) => {
   return (
@@ -22,15 +23,17 @@ const UploadedResults = ({ hideUpload = false }) => {
             {/*  upload button  */}
 
             {!hideUpload && (
-              <Button
-                variant={"outlined"}
-                className={
-                  "border bg-c-blue text-white gap-3 font-medium text-[13px]"
-                }
-              >
-                Upload New Results
-                <UploadSvg />
-              </Button>
+              <LecturerUploadResultsDialogue>
+                <Button
+                  variant={"outlined"}
+                  className={
+                    "border bg-c-blue text-white gap-3 font-medium text-[13px]"
+                  }
+                >
+                  Upload New Results
+                  <UploadSvg />
+                </Button>
+              </LecturerUploadResultsDialogue>
             )}
           </div>
 
