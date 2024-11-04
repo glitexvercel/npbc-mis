@@ -38,9 +38,8 @@ const UploadResultsDialogue = ({ children }) => {
   const payFeeMutation = useMutation({
     mutationKey: "pay_fee",
     mutationFn: (props) => payFeeViaMpesa(props),
-    onSuccess: (res) => {
+    onSuccess: () => {
       toast.success("Success!", { description: "Mpesa payment initiated" });
-      dialogRef.current.close();
     },
     onError: (error) =>
       toast.error("Error", {
