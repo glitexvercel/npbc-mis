@@ -119,6 +119,11 @@ const timeTableColumns = [
     header: "Friday",
     cell: renderCell,
   },
+  {
+    accessorKey: "Saturday",
+    header: "Saturday",
+    cell: renderCell,
+  },
 ];
 
 export const EmptyTableRow = ({ results = [], isLoading }) => (
