@@ -69,6 +69,7 @@ export default NextAuth({
             return {
               ...user,
               token: data.token,
+              isFirst: user.first_user,
             };
           }
         }
@@ -102,6 +103,7 @@ export default NextAuth({
           phone: token.phone,
           reg_no: token.reg_no,
           year: token?.year,
+          isFirst: token.isFirst,
         },
       };
     },

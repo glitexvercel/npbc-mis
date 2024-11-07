@@ -37,7 +37,12 @@ const LabelledInput = ({
  * return a controlled labelled input
  * @returns {JSX.Element}
  */
-export const ControlledLabelledInput = ({ control, rules, name, ...rest }) => {
+export const ControlledLabelledInput = ({
+  control,
+  rules = null,
+  name,
+  ...rest
+}) => {
   return (
     <Controller
       name={name}

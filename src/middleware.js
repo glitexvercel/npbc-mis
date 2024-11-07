@@ -6,6 +6,14 @@ export default withAuth(
   function middleware(req) {
     const token = req.nextauth.token;
 
+    // check if token.isFirst exists
+    if (token?.isFirst) {
+      console.log("isFirst", token.isFirst);
+      return NextResponse.redirect(
+        new URL("/portal/auth/change_password", req.url)
+      );
+    }
+
     // check if pathname is of authentication and token exists
     if (req.nextUrl.pathname.includes("auth") && token?.token) {
       if (token.role === "student")

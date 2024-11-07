@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Layout from "@/layout";
 
-const FormLayout = ({ title, children, formClassName, ...rest }) => {
+const FormLayout = ({ title = "", children, formClassName = "", ...rest }) => {
   return (
     <Layout hideApplication={true}>
       {/*hero section */}
