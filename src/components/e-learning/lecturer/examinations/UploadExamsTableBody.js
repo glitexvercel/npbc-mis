@@ -54,7 +54,7 @@ export const CTableRow = ({ data, currentState, index }) => {
   // fetch exam types
   const {
     data: scores,
-    isPending,
+    isFetching,
     isSuccess,
   } = useQuery({
     queryKey: ["scores", data?.id, currentState?.unit, currentState?.examType],
@@ -158,13 +158,13 @@ export const CTableRow = ({ data, currentState, index }) => {
       </TableCell>
       <TableCell className="text-center">
         <Button
-          disabled={saveScoresMutation?.isPending || isPending || !hasValues}
+          disabled={saveScoresMutation?.isPending || isFetching || !hasValues}
           className={"bg-c-blue w-full"}
           onClick={() => saveScoresMutation.mutate()}
         >
           {saveScoresMutation?.isPending
             ? "Saving..."
-            : isPending
+            : isFetching
             ? "Loading..."
             : "Save"}
         </Button>

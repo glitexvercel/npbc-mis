@@ -60,13 +60,13 @@ const UploadResultsDialogue = ({ children }) => {
               <ResultSelector
                 id={"unit"}
                 placeholder={
-                  fetchUnitsQuery.isPending
+                  fetchUnitsQuery.isFetching
                     ? "Fetching units..."
                     : "Enter descriptive title"
                 }
                 label={"Unit"}
                 selectItems={fetchUnitsQuery?.data?.data || []}
-                disabled={fetchUnitsQuery.isPending}
+                disabled={fetchUnitsQuery.isFetching}
                 labelKey={"name"}
                 valueKey={"id"}
                 value={state?.unit}
@@ -121,7 +121,7 @@ const UploadResultsDialogue = ({ children }) => {
                 placeholder={""}
                 label={"Exam Type"}
                 selectItems={fetchExamTypesQuery?.data?.data || []}
-                disabled={fetchExamTypesQuery.isPending}
+                disabled={fetchExamTypesQuery.isFetching}
                 labelKey={"name"}
                 valueKey={"id"}
                 value={state?.examType}
@@ -150,7 +150,7 @@ const UploadResultsDialogue = ({ children }) => {
                   renderCustomBody={() => (
                     <UploadExamsTableBody
                       data={fetchStudentScoresQuery.data?.data?.data || []}
-                      isLoading={fetchStudentScoresQuery?.isPending}
+                      isLoading={fetchStudentScoresQuery?.isFetching}
                       currentState={state}
                     />
                   )}
