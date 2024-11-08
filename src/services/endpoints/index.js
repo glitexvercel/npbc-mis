@@ -20,6 +20,7 @@ const endpoints = {
   validate_mpesa: "mpesa/stk-push/validate/",
   attendance_stats: "attendance-stats/",
   pay_via_mpesa: "mpesa/stk-push",
+  users: "users/",
 };
 
 export default endpoints;
