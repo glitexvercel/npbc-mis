@@ -22,6 +22,10 @@ const ChangePassword = () => {
       toast.success("Password updated successfully");
       await router.push("/portal/auth/login");
     },
+    onError: (error) => {
+      // @ts-ignore
+      toast.error(error.response?.data?.message || "An error occurred");
+    },
   });
 
   const handleProceed = (data: IChangePassword) => {
