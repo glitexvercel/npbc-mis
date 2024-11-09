@@ -43,10 +43,4 @@ const stats = [
     icon: <BuildingMarkSvg />,
     key: "duration",
   },
-  {
-    title: "ksh. 12,000",
-    desc: "Pending Balance",
-    icon: <TrainingClassSvg />,
-    key: "semester",
-  },
 ];
