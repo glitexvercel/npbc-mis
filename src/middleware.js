@@ -8,7 +8,6 @@ export default withAuth(
 
     // check if token.isFirst exists
     if (token?.isFirst) {
-      console.log("isFirst", token.isFirst);
       return NextResponse.redirect(
         new URL("/portal/auth/change_password", req.url)
       );
