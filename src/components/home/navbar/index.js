@@ -203,7 +203,8 @@ const nav_list = [
   },
   {
     name: "E-Learning",
-    path: "/portal",
+    path: "https://classroom.google.com",
+    target: "_blank",
     key: "e-learning",
   },
   {
