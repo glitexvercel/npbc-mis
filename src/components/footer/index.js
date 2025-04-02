@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../general";
+import Link from "next/link";
 
 const Footer = ({ showModal, hideApplication }) => {
   return (
@@ -80,29 +81,59 @@ const NPBC = () => (
 const Explore = () => (
   <div className={"flex-1 md:flex-[0.5] pl-5 "} data-aos="fade-up">
     <h6 className="c-large mb-4">Explore</h6>
-    {/* Location */}
+    {/* Our History */}
     <div className="block leading-6">
-      <a href="">Community outreach</a>
+      <Link
+        href="https://www.npbc.co.ke/about#history"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Our History</p>
+      </Link>
     </div>
 
-    {/* Hours */}
+    {/* Mission & Vision */}
     <div className="block leading-6">
-      <a href="">Staff and Faculty</a>
+      <Link
+        href="https://www.npbc.co.ke/about#mission"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Mission & Vision</p>
+      </Link>
     </div>
 
-    {/* Telephone */}
+    {/* How to Apply */}
     <div className="block leading-6">
-      <a href="">Downloads</a>
+      <Link
+        href="https://www.npbc.co.ke/admission#how-to-apply"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>How to Apply</p>
+      </Link>
     </div>
 
-    {/* Email */}
+     {/* Study modes */}
     <div className="block leading-6">
-      <a href="">Social Media</a>
+      <Link
+        href="https://www.npbc.co.ke/courses#modes"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Study modes</p>
+      </Link>
     </div>
 
-    {/* Email */}
+    {/* Application FAQs */}
     <div className="block leading-6">
-      <a href="">Employment</a>
+      <Link
+        href="https://www.npbc.co.ke/admission#faqs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Application FAQs</p>
+      </Link>
     </div>
   </div>
 );
@@ -110,54 +141,75 @@ const Explore = () => (
 const QuickLinks = () => (
   <div className={"flex-1 md:flex-[0.5] pl-5 "} data-aos="fade-up">
     <h6 className="c-large mb-4">QUICK LINKS</h6>
-    {/* Location */}
+    {/* Admissions */}
     <div className="block leading-6">
-      <a>Admissions</a>
+      <Link
+        href="https://www.npbc.co.ke/admission"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Admissions</p>
+      </Link>
     </div>
 
-    {/* Hours */}
+    {/* Student Life */}
     <div className="block leading-6">
-      <a>Student Life</a>
+      <Link
+        href="https://www.npbc.co.ke/#life-at-npbc"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Student Life</p>
+      </Link>
     </div>
 
-    {/* Telephone */}
+    {/* E-learning */}
     <div className="block leading-6">
-      <a>Staff Mail</a>
-    </div>
-
-    {/* Email */}
-    <div className="block leading-6">
-      <a>NPBC Online</a>
+      <Link
+        href="https://classroom.google.com/u/0/h"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>NPBC Online</p>
+      </Link>
     </div>
   </div>
 );
 
 const Research = () => (
   <div className={"flex-1 md:flex-[0.5] pl-5 "} data-aos="fade-up">
-    <h6 className="c-large mb-4">RESEARCH</h6>
+    <h6 className="c-large mb-4">COURSES</h6>
     {/* Location */}
     <div className="block leading-6">
-      <a>NPBC Online</a>
+      <Link
+        href="https://www.npbc.co.ke/courses#undergraduate"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Undergraduate Programs</p>
+      </Link>
     </div>
 
     {/* Hours */}
     <div className="block leading-6">
-      <a>Reflection Blog</a>
+     <Link
+        href="https://www.npbc.co.ke/courses#diploma"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Diploma Programs</p>
+      </Link>
     </div>
 
     {/* Telephone */}
     <div className="block leading-6">
-      <a>Community Engagement</a>
-    </div>
-
-    {/* Email */}
-    <div className="block leading-6">
-      <a href={"/about/news"}>News and Events</a>
-    </div>
-
-    {/* Email */}
-    <div className="block leading-6">
-      <a>Research Projects</a>
+      <Link
+        href="https://www.npbc.co.ke/ourses#certificate"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Certificate Programs</p>
+      </Link>
     </div>
   </div>
 );
