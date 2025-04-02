@@ -141,24 +141,28 @@ const Explore = () => (
 
     {/* Social Media Section */}
     <div className="leading-6 flex items-center gap-4 my-2">
-      <a
+      <Link
         href="https://www.facebook.com/profile.php?id=100064239451496"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaFacebook className="text-white text-2xl" />
-      </a>
-      <a href="https://x.com/Npbc_ke" target="_blank" rel="noopener noreferrer">
+      </Link>
+      <Link
+        href="https://x.com/Npbc_ke"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaXTwitter className="text-white text-2xl" />
-      </a>
+      </Link>
       {/* linkedin: https://www.linkedin.com/company/nairobi-pentecostal-biblecollege */}
-      <a
+      <Link
         href="https://www.youtube.com/@NairobiPentecostalBibleCollege"
         target="_blank"
         rel="noopener noreferrer"
       >
         <IoLogoYoutube className="text-white text-2xl" />
-      </a>
+      </Link>
     </div>
   </div>
 );
