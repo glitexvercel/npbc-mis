@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "../general";
 import Link from "next/link";
+import { FaFacebook } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = ({ showModal, hideApplication }) => {
   return (
@@ -114,7 +117,7 @@ const Explore = () => (
       </Link>
     </div>
 
-     {/* Study modes */}
+    {/* Study modes */}
     <div className="block leading-6">
       <Link
         href="https://www.npbc.co.ke/courses#modes"
@@ -134,6 +137,28 @@ const Explore = () => (
       >
         <p>Application FAQs</p>
       </Link>
+    </div>
+
+    {/* Social Media Section */}
+    <div className="leading-6 flex items-center gap-4 my-2">
+      <a
+        href="https://www.facebook.com/profile.php?id=100064239451496"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaFacebook className="text-white text-2xl" />
+      </a>
+      <a href="https://x.com/Npbc_ke" target="_blank" rel="noopener noreferrer">
+        <FaXTwitter className="text-white text-2xl" />
+      </a>
+      {/* linkedin: https://www.linkedin.com/company/nairobi-pentecostal-biblecollege */}
+      <a
+        href="https://www.youtube.com/@NairobiPentecostalBibleCollege"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IoLogoYoutube className="text-white text-2xl" />
+      </a>
     </div>
   </div>
 );
@@ -192,7 +217,7 @@ const Research = () => (
 
     {/* Hours */}
     <div className="block leading-6">
-     <Link
+      <Link
         href="https://www.npbc.co.ke/courses#diploma"
         target="_blank"
         rel="noopener noreferrer"
