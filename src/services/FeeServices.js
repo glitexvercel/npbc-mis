@@ -17,3 +17,13 @@ export const payFeeViaMpesa = async (payload) => {
 
   return data;
 };
+
+export const validateMpesaPayment = async (locationLink) => {
+  const { data } = await makeRequest(
+    GET_REQUEST,
+    `${endpoints.validate_mpesa}?location-link=${locationLink}`,
+
+  );
+
+  return data;
+};
