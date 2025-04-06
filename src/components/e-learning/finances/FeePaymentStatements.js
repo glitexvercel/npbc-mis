@@ -9,8 +9,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import useStatement from "@/hooks/usStatement";
+import { EmptyTableRow } from "../academics/Timetable";
 
 const FeePaymentStatements = () => {
+  const { getStatement, isFetching } = useStatement();
   return (
     <div className={"my-3"}>
       <h5 className={" text-c-red mb-1 text-base font-semibold mt-7"}>
@@ -54,7 +57,9 @@ const FeePaymentStatements = () => {
           </TableHeader>
 
           <TableBody>
-            {statements?.map((res, ind) => (
+            {!getStatement()?.length ? (
+              <EmptyTableRow key={"0"} isLoading={isFetching} results={statements} />
+            ) : getStatement()?.map((res, ind) => (
               <TableRow key={ind} className={"border-b border-gray-100"}>
                 {Object.keys(res)?.map((cKey, index) => (
                   <TableCell
@@ -95,54 +100,6 @@ const titles = [
 ];
 
 const statements = [
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
-  {
-    paidBy: "Claire Waithera",
-    paidVia: "Mpesa",
-    dop: "12 Jan 2023 08:40AM",
-    amount: "20,200",
-  },
   {
     paidBy: "Claire Waithera",
     paidVia: "Mpesa",

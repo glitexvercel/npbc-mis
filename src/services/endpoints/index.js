@@ -8,7 +8,7 @@ const endpoints = {
   attendance: "attendance/",
   open_attendance: "open-attendance/",
   fee: "me/fee/",
-  fee_statements: "fee-statements/",
+  fee_statements: "fee-statements?dont_paginate=true",
   timetable: "timetable/",
   semesters: "semesters/",
   unit_resources: "unit-resources/",
