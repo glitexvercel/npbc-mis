@@ -13,7 +13,7 @@ const Examinations = () => {
 
       <LecturerExamTimetable />
 
-      {/* <LecturerExamUploadedResults /> */}
+      <LecturerExamUploadedResults />
     </LecturerPortalLayout>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "@/layout";
-import { Hero, Portals } from "@/components";
+import Layout from "../layout";
+import { Hero, Portals } from "../components";
 
 const Index = () => {
   return (

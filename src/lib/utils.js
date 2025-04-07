@@ -33,6 +33,7 @@ const days = [
   { id: 4, name: "Thursday" },
   { id: 5, name: "Friday" },
 ];
+
 export const groupUnitsByDay = (units) => {
   const daysGroupedByUnits = days.map((day) => {
     // filter the units by the current day
@@ -61,4 +62,14 @@ export const groupUnitsByDay = (units) => {
 
     return acc;
   }, []);
+};
+
+export const getYears = (startYear = 2018) => {
+  const endYear = new Date().getFullYear();
+
+  const years = [];
+  for (let i = startYear; i <= endYear; i++) {
+    years.push(i);
+  }
+  return years;
 };

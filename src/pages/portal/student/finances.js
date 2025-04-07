@@ -17,7 +17,7 @@ const Finances = () => {
       <FinanceBanner />
 
       {/* Fee Structure */}
-      <FinanceFeeStructure />
+      {/*<FinanceFeeStructure />*/}
 
       {/*  Fee Payment Table   */}
       <FeePaymentStatements />

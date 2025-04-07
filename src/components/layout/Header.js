@@ -40,7 +40,7 @@ const Header = ({ showModal }) => {
         <Link href="/portal">
           <Button
             className={
-              "bg-c-red-pale flex items-center justify-center gap-2 c-normal py-2.5 w-auto px-2 md:px-0 md:w-[160px] text-c-red"
+              "bg-c-red flex items-center justify-center gap-2 c-normal py-2.5 w-auto px-2 md:px-0 md:w-[160px] text-white"
             }
             disabled={true}
           >
@@ -52,7 +52,7 @@ const Header = ({ showModal }) => {
         </Link>
         <Button
           className={
-            "bg-c-red flex items-center justify-center gap-2 c-normal py-2.5 w-auto px-5 md:px-0 md:w-[160px] text-white"
+            "bg-c-red hidden items-center justify-center gap-2 c-normal py-2.5 w-auto px-5 md:px-0 md:w-[160px] text-white"
           }
           onClick={showModal}
         >

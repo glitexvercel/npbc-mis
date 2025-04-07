@@ -13,7 +13,7 @@ const Navbar = () => {
       {/*logo*/}
       <div className={"flex_row-center-y gap-2"}>
         <Image
-          src={"/images/layout/logo-1.png"}
+          src={"/images/layout/npbc-logo-2.png"}
           className={"w-16 object-contain"}
           alt={"logo"}
           height={100}

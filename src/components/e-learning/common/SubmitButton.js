@@ -2,7 +2,12 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { ButtonSpinner } from ".";
 
-const SubmitButton = ({ isLoading, text, children, ...rest }) => {
+const SubmitButton = ({
+  isLoading = false,
+  text = null,
+  children,
+  ...rest
+}) => {
   return (
     <Button
       type={"submit"}

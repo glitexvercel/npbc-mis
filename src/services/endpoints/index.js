@@ -8,7 +8,7 @@ const endpoints = {
   attendance: "attendance/",
   open_attendance: "open-attendance/",
   fee: "me/fee/",
-  fee_statements: "fee-statements/",
+  fee_statements: "fee-statements?dont_paginate=true",
   timetable: "timetable/",
   semesters: "semesters/",
   unit_resources: "unit-resources/",
@@ -17,8 +17,10 @@ const endpoints = {
   password_reset: "forgot",
   exam_types: "exam-types",
   fee_mpesa: "fee-mpesa",
-  validate_mpesa: "mpesa/stk-push/validate/",
+  validate_mpesa: "mpesa/payment-status",
   attendance_stats: "attendance-stats/",
+  pay_via_mpesa: "mpesa/stk-push",
+  users: "users/",
 };
 
 export default endpoints;
