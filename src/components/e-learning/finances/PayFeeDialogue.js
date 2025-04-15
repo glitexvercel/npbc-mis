@@ -14,7 +14,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useMutation } from "@tanstack/react-query";
-import { payFeeViaMpesa } from "@/services/FeeServices";
+import { payFeeViaMpesa, validateMpesaPayment } from "@/services/FeeServices";
 import { CgSpinner } from "react-icons/cg";
 import PaymentLoader from './PaymentLoader';
 
