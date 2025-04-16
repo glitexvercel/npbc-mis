@@ -76,6 +76,7 @@ const UploadResultsDialogue = ({ children }) => {
     mutationKey: "pay_fee",
     mutationFn: (props) => payFeeViaMpesa(props),
     onSuccess: (res) => {
+      console.log(res);
       toast.success("Success!", { description: "Mpesa payment initiated" });
       pollPaymentStatus(res.location);
     },
