@@ -20,13 +20,14 @@ import PaymentLoader from './PaymentLoader';
 
 const UploadResultsDialogue = ({ children }) => {
   const dialogRef = useRef(null);
+  const [open, setOpen] = useState(false);
   const [state, setState] = useState({
     phone: "",
     student_number: "",
     amount: "",
   });
   const [isPolling, setIsPolling] = useState(false);
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -46,6 +47,7 @@ const UploadResultsDialogue = ({ children }) => {
         if (res.status?.toLowerCase() === "success") {
           clearInterval(interval);
           setIsPolling(false);
+          setOpen(false);
           toast.success("Payment confirmed!", {
             description: "Your M-pesa payment was successful.",
           });
@@ -117,8 +119,10 @@ const UploadResultsDialogue = ({ children }) => {
 
   return (
     <>
-      <Dialog ref={dialogRef}>
-        <DialogTrigger asChild>{children}</DialogTrigger>
+      <Dialog open={open} onOpenChange={setOpen} ref={dialogRef}>
+        <DialogTrigger asChild>
+          <div onClick={() => setOpen(true)}>{children}</div>
+        </DialogTrigger>
         <DialogContent>
           <form className={"flex flex-col gap-5"} onSubmit={handleSubmit}>
             <DialogHeader className={"py-3 border-b border-gray-300"}>
@@ -198,7 +202,7 @@ const UploadResultsDialogue = ({ children }) => {
           </form>
         </DialogContent>
       </Dialog>
-      {(payFeeMutation.isPending || isPolling) && <PaymentLoader/>}
+      {(payFeeMutation.isPending || isPolling) && <PaymentLoader />}
     </>
   );
 };
