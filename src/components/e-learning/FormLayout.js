@@ -5,7 +5,9 @@ import Layout from "@/layout";
 
 const FormLayout = ({ title = "", children, formClassName = "", ...rest }) => {
   return (
-    <Layout hideApplication={true}>
+    <Layout
+      hideApplication={true}
+      showNavigation={false}>
       {/*hero section */}
       <div className={"relative h-[40vh] bg-white"}>
         <Image
