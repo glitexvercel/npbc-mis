@@ -7,7 +7,7 @@ import Link from "next/link";
 const Header = ({ showModal }) => {
   return (
     <div className="bg-white md:px-10 px-3 h-[75px] flex items-center text-black">
-      <Link href="/home">
+      <Link href="/">
         <div className="flex flex-col md:flex-row gap-[0.5] md:gap-4 justify-center md:items-center ">
           {/* Image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Toaster } from "sonner";
 
-const Layout = ({ children, hideApplication }) => {
+const Layout = ({ children, hideApplication, showNavigation = false }) => {
   const router = useRouter();
 
   const query = router.query;
@@ -70,7 +70,7 @@ const Layout = ({ children, hideApplication }) => {
       )}
 
       {/* Navbar */}
-      <Navbar />
+      {showNavigation && <Navbar />}
 
       {/* children */}
       {children}
